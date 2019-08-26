@@ -1,66 +1,39 @@
 import React, { Component} from 'react';
-import {  Navbar, NavItem, } from 'react-materialize';
-
+import {  Navbar, NavItem, Dropdown, Divider, Icon} from 'react-materialize';
+import { Link } from 'react-router-dom';
 
 class Header extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {scrolling: false};
-        this.handleScroll =this.handleScroll.bind(this)
     
-    }
-    componentDidMount() {
-        window.addEventListener('scroll', this.handleScroll);
-    }
 
    
-    handleScroll(event) {
-        console.log(this.state)
-        if(window.scrollY > 70) 
-            this.setState( { scrolling: true });
-        else 
-            this.setState({ scrolling: false });
-        
-    }
     render() {
-        const mainPage = window.location.pathname === "/";
-        const scrolling= this.state.scrolling;
-        let logo ;
-        let centerLogo ;
-        if(scrolling && mainPage)  {
-            logo =  <a href="/"> Samuel Bines </a>
-            centerLogo = <a></a>
-        } else {
-            centerLogo =  <a href="/"> <img src="images/profile-ibm.jpg" width="100px;"/>Samuel Bines  </a>
-            logo = <a></a>
-        }
+        let logo =   <a href="/"> Document Saver </a>;
         
         return (
             <div className="section black" >
-                 <Navbar brand={logo} centerLogo fixed alignLinks="center">
-                    <NavItem href="/#technology">
-                        Technology
-                    </NavItem>
-                    <NavItem href="/#profile">
-                        Profile
-                    </NavItem>
-                    <NavItem href="/#penpic">
-                        Pen Pic
-                    </NavItem>
-                </Navbar>
-                <div className="row container">
+                 <Navbar brand={logo} fixed alignLinks="right">
                     
-                    <h2 className="header grey-text text-lighten-2 lighten-3">
-                        {centerLogo}
                     
-                    </h2>
-                    <p className="grey-text text-lighten-2 lighten-3">
-                        <q><i>
-                            Software Developer, Technical Architect, Strategy Consultant. These titles explain my skills but not what I can accomplish.
-                        </i> </q>
-                    </p>
+                    <NavItem className="right" >
+                        <Link to="/" >
+                            <Icon>
+                                add_circle_outline
+                            </Icon>
+                        </Link>
+                    </NavItem>
+                    <NavItem  >
 
-                </div>
+                    <Dropdown trigger={<a style={{ float: "right"}}><Icon>
+                            person_add
+                        </Icon></a> } alignLinks="right">
+                    <Link to="/register" >Register </Link>
+                    <Link to="/login" >Login </Link>
+                    
+                </Dropdown>
+                </NavItem>
+                </Navbar>
+             
+               
                 
             </div>
            

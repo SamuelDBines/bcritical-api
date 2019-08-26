@@ -11,7 +11,7 @@ var options = {
   cert: cert
 };
 const port = 8000;
-
+const httpPort = 8080;
 
 
 let data;
@@ -59,9 +59,9 @@ function requireHTTPS(req, res, next) {
 app.use('/', router);
 var server = https.createServer(options, app);
 var httpServer = http.createServer(app);
-httpServer.listen(8080, () => {
-    console.log("HTTP server starting on port : 8080")
-})
+// httpServer.listen(8080, () => {
+//     console.log("HTTP server starting on port : 8080")
+// })
 server.listen(port, () => {
   console.log("server starting on port : " + port)
 });
