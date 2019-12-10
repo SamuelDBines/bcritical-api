@@ -60,3 +60,8 @@ docker run -p 8080:8080 --network="host" -d sbines/personalwebsite
  openssl req -nodes -new -x509 -keyout server.key -out server.cert
  sudo certbot --nginx -d samuelBines.com -d www.samuelBines.com
 ```
+### Redux
+
+```
+npm install react-redux redux
+```

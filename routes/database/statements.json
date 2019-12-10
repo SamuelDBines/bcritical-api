@@ -1,0 +1,6 @@
+{
+  "getUsers": {
+    "statement": "select * from public.users",
+    "type": "rows"
+  }
+}
