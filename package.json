@@ -4,7 +4,7 @@
   "description": "1. npm install react\r 2. npm install react-dom\r 3. npm install webpack\r 4. npm install webpack-dev-server\r 5. npm install webpack-cli\r 6. npm install dotenv\r ```\r npm install react react-dom webpack webpack-dev-server webpack-cli dotenv\r ```\r 1. npm install --sav-dev babel-core\r 2. npm install --sav-dev babel-loader@7\r 3. npm install --sav-dev babel-preset-react\r 4. npm install --sav-dev babel-preset-env\r 5. npm install --sav-dev html-webpack-plugin",
   "main": "app.js",
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-polyfill": "^6.26.0",
