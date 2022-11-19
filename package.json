@@ -14,7 +14,7 @@
     "cors": "^2.8.5",
     "css-loader": "^3.2.0",
     "ecrypt": "^2.0.4",
-    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-plugin": "^5.5.0",
     "https": "^1.0.0",
     "jsonwebtoken": "^8.5.1",
     "nodemon": "^1.19.1",
@@ -31,7 +31,7 @@
     "sha256": "^0.2.0",
     "style-loader": "^1.0.0",
     "webpack": "^4.39.2",
-    "webpack-cli": "^3.3.7",
+    "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.8.0"
   },
   "devDependencies": {
